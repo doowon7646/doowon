@@ -1,65 +1,55 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>두원기계(주)</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Arial', sans-serif;
-    }
-
-    nav {
+      font-family: sans-serif;
+      text-align: center;
       background-color: white;
-      padding: 20px;
-      text-align: center;
     }
-
-    nav a {
-      color: navy;
-      text-decoration: none;
-      margin: 0 15px;
+    .main-section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100vh;
+    }
+    .top-half {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .bottom-half {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    .company-name {
+      font-size: 2em;
       font-weight: bold;
-    }
-
-    .main {
-      background-image: url('background.png');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      text-align: center;
-      padding: 100px 20px;
-      color: white;
-    }
-
-    .main img {
-      width: 200px;
-      margin-bottom: 20px;
-    }
-
-    .main h1 {
-      font-size: 2.5em;
-      margin: 0;
+      margin-top: 10px;
+      color: #003366;
     }
   </style>
 </head>
 <body>
-
-  <nav>
-    <a href="index.html">홈</a>
-    <a href="about.html">인사말</a>
-    <a href="equipment.html">설비현황</a>
-    <a href="features.html">주요제품</a>
-    <a href="factory.html">사업장</a>
-    <a href="history.html">연혁</a>
-    <a href="location.html">오시는길</a>
-  </nav>
-
-  <div class="main">
-    <img src="logo-dw.png" alt="DW 로고">
-    <h1>두원기계(주)</h1>
+  <div class="main-section">
+    <div class="top-half">
+      <img src="logo-dw-top.png" alt="DW 로고" style="width: 150px; margin: 0 auto;">
+      <div class="company-name">두원기계(주)</div>
+    </div>
+    <div class="bottom-half">
+      <img src="doowon-machine-bottom.png" alt="Doowon Machine 텍스트">
+    </div>
   </div>
-
 </body>
 </html>
