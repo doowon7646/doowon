@@ -12,14 +12,22 @@
   </style>
 </head>
 <body>
-  <div id="navbar"></div>
-  <script>
-    fetch('./navbar.html')
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById('navbar').innerHTML = data;
-      });
-  </script>
+<div id="navbar"></div>
+<script>
+  fetch('./navbar.html')
+    .then(res => {
+      if (!res.ok) throw new Error('메뉴를 불러오지 못했습니다.');
+      return res.text();
+    })
+    .then(data => {
+      document.getElementById('navbar').innerHTML = data;
+    })
+    .catch(err => {
+      console.error(err);
+      document.getElementById('navbar').innerHTML = '';
+    });
+</script>
+
 
 
 </body>
