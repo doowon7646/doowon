@@ -23,6 +23,15 @@
   </style>
 </head>
 <body>
+  <div id="navbar"></div>
+<script>
+  fetch('./navbar.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('navbar').innerHTML = data;
+    });
+</script>
+
 
   <h1>오시는 길</h1>
   <p><strong>주소:</strong> 부산광역시 강서구 미음산단로 80</p>
