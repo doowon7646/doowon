@@ -1,1 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Greeting - DOOWONMACHINE CO. </title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.8;
+      margin: 0;
+      padding: 0;
+    }
+
+    #content {
+      padding: 40px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      color: #003366;
+      font-size: 28px;
+    }
+
+    p {
+      font-size: 16px;
+      margin-bottom: 16px;
+    }
+
+    .image-container {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .image-container img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #ccc;
+    }
+
+    footer {
+      background-color: #444;
+      color: white;
+      padding: 20px 0;
+      font-size: 14px;
+    }
+
+    footer .footer-inner {
+      max-width: 1000px;
+      margin: auto;
+      padding: 0 20px;
+    }
+
+    /* 모바일 대응 */
+    @media (max-width: 768px) {
+      #content {
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 22px;
+      }
+
+      p {
+        font-size: 15px;
+      }
+
+      footer {
+        text-align: center;
+        font-size: 13px;
+      }
+
+      .footer-inner div {
+        margin-bottom: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="navbar"></div>
+  <script>
+    fetch('./navbar.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+      });
+  </script>
+
+  <div id="content">
+    <h1>인사말</h1>
+
+    <div class="image-container">
+      <img src="doowon-factory.jpg" alt="회사 내부 이미지">
+    </div>
+
+    <section class="ceo-greeting container">
+  <h1>CEO’s Greeting</h1>
+  <p>
+    I am <strong>Youngcheon Myung</strong>, CEO of <strong>Doowon Machinery Co., Ltd.</strong>, a company striving to become a first-class enterprise with vision and ambition for the future.
+  </p>
+  <p>
+    Since our founding in 2001, Doowon Machinery has worked tirelessly to deliver products of superior quality. We actively respond to the demands of industries such as wind power, petrochemical plants, and nuclear power generation by continuously enhancing our technology, facilities, and human resources.
+  </p>
+  <p>
+    With more than 25 years of expertise, we pursue relentless innovation and ongoing investment in advanced equipment. Through these efforts, we aim to lead the 21st century as a global enterprise, committed to delivering customer satisfaction and inspiration.
+  </p>
+  <p>
+    We sincerely appreciate your trust and support.
+  </p>
+  <p class="signature">
+    CEO, <strong>Youngcheon Myung</strong>
+  </p>
+</section>
+
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <strong>DOOWONMACHINE CO.</strong> &nbsp; | &nbsp;
+        대표 : 명영천 &nbsp; | &nbsp;
+        주소 : 부산광역시 강서구 미음산단로 80
+      </div>
+      <div>
+        Tel : 82-51-831-9517 &nbsp; | &nbsp;
+        Fax : 82-51-831-9518 &nbsp; | &nbsp;
+        E-mail : doowon7646@naver.com
+      </div>
+      <div style="margin-top: 10px;">
+        Copyright © DOOWON MACHINE CO., LTD. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
