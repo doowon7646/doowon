@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DOOWONMACHINE CO. </title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      text-align: center;
+      background-color: white;
+    }
+    nav {
+      background-color: #003366;
+      padding: 20px 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+    .main-section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 90vh;
+    }
+    .top-half {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .bottom-half {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    .company-name {
+      font-size: 2em;
+      font-weight: bold;
+      margin-top: 10px;
+      color: #003366;
+    }
+    footer {
+      background-color: #444;
+      color: white;
+      padding: 20px 0;
+      font-size: 14px;
+    }
+    .footer-content {
+      max-width: 1000px;
+      margin: auto;
+      padding: 0 20px;
+    }
+    .footer-content div {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="navbar"></div>
+  <script>
+    fetch('./navbar.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+      });
+  </script>
+
+  <div class="main-section">
+    <div class="top-half">
+      <img src="logo-dw-top.png" alt="DW 로고" style="width: 150px; margin: 0 auto;">
+      <div class="company-name">DOOWONMACHINE CO. </div>
+    </div>
+    <div class="bottom-half">
+      <img src="doowon-machine-bottom.png" alt="Doowon Machine 텍스트">
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <div>
+        <strong>DOOWONMACHINE</strong> &nbsp; | &nbsp;
+        CEO : Youngcheon Myung &nbsp; | &nbsp;
+        주소 : 80, Mieumsandan-ro, Gangseo-gu, Busan, Republic of Korea
+      </div>
+      <div>
+        Tel : 82-51-831-9517 &nbsp; | &nbsp;
+        Fax : 82-51-831-9518 &nbsp; | &nbsp;
+        E-mail : doowon7646@naver.com
+      </div>
+      <div style="margin-top: 10px;">
+        Copyright © DOOWON MACHINE CO., LTD. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
