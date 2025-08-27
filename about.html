@@ -1,43 +1,47 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>인사말 - 두원기계(주)</title>
+
   <style>
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       font-family: Arial, sans-serif;
       line-height: 1.8;
       margin: 0;
       padding: 0;
+      color: #222;
     }
 
+    /* 메인 컨텐츠 래퍼 */
     #content {
-      padding: 40px;
+      padding: 40px 20px;
       max-width: 1000px;
-      margin: auto;
+      margin: 0 auto;
     }
 
+    /* 페이지 제목 */
     h1 {
       text-align: center;
       color: #003366;
       font-size: 28px;
+      margin: 16px 0 32px;
     }
 
-    p {
-      font-size: 16px;
-      margin-bottom: 16px;
+    p { font-size: 16px; margin: 0 0 16px; }
+
+    /* 본문을 화면 가운데로 모으는 박스 */
+    .greeting-text {
+      max-width: 800px;
+      margin: 0 auto;        /* 화면 가운데 배치 */
+      text-align: left;      /* 읽기 좋게 왼쪽 정렬 */
+      line-height: 1.8;
     }
 
-    .image-container {
-      text-align: center;
-      margin: 30px 0;
-    }
-
+    .image-container { text-align: center; margin: 30px 0; }
     .image-container img {
       max-width: 100%;
       height: auto;
@@ -46,115 +50,66 @@
 
     footer {
       background-color: #444;
-      color: white;
+      color: #fff;
       padding: 20px 0;
       font-size: 14px;
     }
-
     footer .footer-inner {
       max-width: 1000px;
-      margin: auto;
+      margin: 0 auto;
       padding: 0 20px;
     }
 
     /* 모바일 대응 */
     @media (max-width: 768px) {
-      #content {
-        padding: 20px;
-      }
-
-      h1 {
-        font-size: 22px;
-      }
-
-      p {
-        font-size: 15px;
-      }
-
-      footer {
-        text-align: center;
-        font-size: 13px;
-      }
-
-      
+      #content { padding: 24px 16px; }
+      h1 { font-size: 22px; margin-bottom: 24px; }
+      p { font-size: 15px; }
+      footer { text-align: center; font-size: 13px; }
+    }
   </style>
-  .greeting-text {
-  max-width: 800px;
-  margin : 0 auto;
-  test-aligh: left;
-  line-height: 1.8;
-}
 </head>
+
 <body>
+  <!-- 네비게이션 -->
   <div id="navbar"></div>
   <script>
     fetch('./navbar.html')
       .then(res => res.text())
-      .then(data => {
-        document.getElementById('navbar').innerHTML = data;
-      });
+      .then(html => { document.getElementById('navbar').innerHTML = html; });
   </script>
 
+  <!-- 본문 -->
   <div id="content">
     <h1>인사말</h1>
 
-  </div clss="greeting-text>
+    <div class="greeting-text">
+      <p>꿈과 미래가 있는 일류기업이 되고자 최선을 다하는<br>
+      두원기계(주)의 대표이사 명영천입니다.</p>
 
-    <p>꿈과 미래가 있는 일류기업이 되고자 최선을 다하는<br>
-    두원기계(주)의 대표이사 명영천입니다.</p>
+      <p>두원기계(주)는 <strong>2001년 설립</strong>되어 고객에게 더 나은 품질의 제품을<br>
+      제공하고자 끊임없이 노력하고 있습니다.</p>
 
-    <p>두원기계(주)는 <strong>2001년 설립</strong>되어 고객에게 더 나은 품질의 제품을<br>
-    제공하고자 끊임없이 노력하고 있습니다.</p>
+      <p>세계의 풍력, 석유 화학 플랜트, 원자력 발전소 등 당사도 고객에게<br>
+      최상의 품질을 제공하고자 기술, 설비 및 인적 제원 관리를 능동적으로<br>
+      대처하고 있으며, 항상 모든 일을 고객의 입장에서 고객을 위한 일이<br>
+      최우선이 되도록 힘쓰고 있습니다.</p>
 
-    <p>세계의 풍력, 석유 화학 플랜트, 원자력 발전소 등 당사도 고객에게<br>
-    최상의 품질을 제공하고자 기술, 설비 및 인적 제원 관리를 능동적으로<br>
-    대처하고 있으며, 항상 모든 일을 고객의 입장에서 고객을 위한 일이<br>
-    최우선이 되도록 힘쓰고 있습니다.</p>
+      <p><strong>25년 그 이상의 경험</strong>과 노하우를 바탕으로 끊임없는 기술력과 지속적인 설비 투자로<br>
+      세계화의 흐름에 따라 21세기를 선도하는 기업으로서<br>
+      고객 만족, 고객 감동을 지향하는 최고의 기업이 되도록 노력하겠습니다.</p>
 
-    <p><strong>25년 그 이상의 경험</strong>과 노하우를 바탕으로 끊임없는 기술력과 지속적인 설비 투자로<br>
-    세계화의 흐름에 따라 21세기를 선도하는 기업으로서<br>
-    고객 만족, 고객 감동을 지향하는 최고의 기업이 되도록 노력하겠습니다.</p>
+      <p>(풍력발전 부품 가공, 제품 부품 가공, 석박 연료노즐 가공, 원자력발전 부품 가공,<br>
+      수력화학플랜트부품 가공 및 대형 보링 가공, 대형 수직 터닝 가공 전문기업)</p>
 
-    <p>(풍력발전 부품 가공, 제품 부품 가공, 석박 연료노즐 가공, 원자력발전 부품 가공, <br>
-    수력화학플랜트부품 가공 및 대형 보링 가공, 대형 수직 터닝 가공 전문기업)</p>
+      <p>감사합니다.</p>
 
-    <p>감사합니다.</p>
+      <p style="text-align:right;">대표이사 명영천</p>
 
-    <p style='text-align:right;'>대표이사 명영천</p>
+      <p>I am Myung Young Chun, CEO of Doowon Machinery Co., Ltd., doing its best to become a<br>
+      first-class company with dreams and future.</p>
 
-    <p>I am Myung Young Chun, CEO of Doowon Machinery Co., Ltd., doing its best to become a<br>
-    first-class company with dreams and future.</p>
+      <p>Doowon Machinery Co., Ltd. was established in 2010 and we trying constantly strives to<br>
+      provide better quality products to our customers.</p>
 
-    <p>Doowon Machinery Co., Ltd. was established in 2010 and we trying constantly strives to<br>
-    provide better quality products to our customers.</p>
-
-    <p>We are under through technology, facilities and human resource managemant in order to<br>
-    provide the best quality for our customers in wind, petrochemical plants, nuclear power
-    plants industry in the world.</p>
-
-    <p>With 25 years of experience in the industry and continuous investment in facilities,<br>
-    I'll try do our best to be a leading company in the 21st century for customer satisfaction</p>
-
-    <p style='text-align:right;'>C.E.O Myung YoungChun</p>
-  
-  </div>
-
-  <footer>
-    <div class="footer-inner">
-      <div>
-        <strong>두원기계(주)</strong> &nbsp; | &nbsp;
-        대표 : 명영천 &nbsp; | &nbsp;
-        주소 : 부산광역시 강서구 미음산단로 80
-      </div>
-      <div>
-        Tel : 82-51-831-9517 &nbsp; | &nbsp;
-        Fax : 82-51-831-9518 &nbsp; | &nbsp;
-        E-mail : doowon7646@naver.com
-      </div>
-      <div style="margin-top: 10px;">
-        Copyright © DOOWON MACHINE CO., LTD. All Rights Reserved.
-      </div>
-    </div>
-  </footer>
-</body>
-</html>
+      <p>We are under through technology, facilities and human resource manageman
