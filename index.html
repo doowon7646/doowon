@@ -23,14 +23,25 @@
       font-weight: bold;
     }
     /* 메인 섹션: 배경 이미지를 꽉 차게 */
-    .main-section {
-      height: 90vh;
+ /* 메인 섹션 */
+.main-section {
+  height: 90vh;
+  background: url('main-hero.png') center/cover no-repeat;
   position: relative;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
+
+/* 색 오버레이 */
+.main-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.4);
+}
+
 
 .main-section::before{
   content:"";
