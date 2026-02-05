@@ -5,27 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>두원기계(주)</title>
   <style>
-    body {
-     margin: 0;
+   body {
+  margin: 0;
   font-family: sans-serif;
   background-color: white;
   color: #222;
-    }
-    nav {
-       background-color: #003366;
+}
+
+nav {
+  background-color: #003366;
   padding: 20px 0;
   text-align: center;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-    }
-    /* 메인 섹션: 배경 이미지를 꽉 차게 */
- /* 메인 섹션 */
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+/* 메인 섹션 */
 .main-section {
-   height: 90vh;
+  height: 90vh;
   background: url('images/main-hero.png') center/cover no-repeat;
   position: relative;
   display: flex;
@@ -41,6 +43,8 @@
   inset: 0;
   background: rgba(255, 255, 255, 0.4);
 }
+
+/* 로고 영역 */
 .hero {
   position: relative;
   z-index: 1;
@@ -48,25 +52,27 @@
 
 .logo {
   width: 260px;
+  height: auto;
+}
 
+footer {
+  background-color: #444;
+  color: white;
+  padding: 20px 0;
+  font-size: 14px;
+}
 
+.footer-content {
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 20px;
+  text-align: center;
+}
 
-    }
-    footer 
-      background-color: #444;
-      color: white;
-      padding: 20px 0;
-      font-size: 14px;
-    }
-    .footer-content {
-      max-width: 1000px;
-      margin: auto;
-      padding: 0 20px;
-      text-align: center;
-    }
-    .footer-content div {
-      margin-bottom: 10px;
-    }
+.footer-content div {
+  margin-bottom: 10px;
+}
+
   </style>
 </head>
 <body>
@@ -81,7 +87,11 @@
   </script>
 
   <!-- 메인 섹션 -->
-  <div class="main-section"></div>
+  <<div class="main-section">
+  <div class="hero">
+    <img src="images/logo.png" alt="두원기계 로고" class="logo">
+  </div>
+</div>
 
   <!-- 푸터 -->
   <footer>
